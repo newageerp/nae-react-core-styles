@@ -1,0 +1,9 @@
+@import "colors";
+
+a {
+  color: $secondaryColor;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

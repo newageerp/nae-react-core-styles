@@ -1,7 +1,7 @@
 {
   "name": "nae-react-core-styles",
-  "version": "1.0.0",
-  "description": "styles for nae core",
+  "version": "0.0.1",
+  "description": "NAE core styles",
   "author": "newageerp",
   "license": "MIT",
   "repository": "newageerp/nae-react-core-styles",
@@ -59,5 +59,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
 }

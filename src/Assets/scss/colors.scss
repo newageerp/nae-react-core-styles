@@ -1,0 +1,62 @@
+$bgBody: #F2F4F4;
+
+$bgGreyColor1: #475f7B;
+$bgGreyColor2: #B3C0CE;
+$bgGreyColor3: #E7EDF3;
+$bgGreyColor4: #F2F4F4;
+$bgGreyColor5: #FAFBFB;
+$bgGreyColor6: #FFFFFF;
+$bgGreyColor7: #F0F1F2;
+$bgGreyColor8: #C8D2DE;
+
+$bgDisabledInputColor: #F2F4F4;
+
+$whiteColor: #FFF;
+
+$primaryColor: #5A8DEE;
+$secondaryColor: #475F7B;
+$successColor: #39DA8A;
+$warningColor: #FDAC41;
+$dangerColor: #FF5B5C;
+$infoColor: #00CFDD;
+$lightColor: #B3C0CE;
+$darkColor: #333;
+
+$primaryHoverColor: #719DF0;
+$secondaryHoverColor: #475F7B;
+$successHoverColor: #39DA8A;
+$warningHoverColor: #FDAC41;
+$dangerHoverColor: #FF5B5C;
+$infoHoverColor: #00CFDD;
+
+$primaryColorLight: #E2ECFF;
+$secondaryColorLight: #E6EAEE;
+$successColorLight: #D2FFE8;
+$warningColorLight: #FFEED9;
+$dangerColorLight: #FFDEDE;
+$infoColorLight: #ccf5f8;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+                (
+                        "primary": $primaryColor,
+                        "secondary": $secondaryColor,
+                        "success": $successColor,
+                        "info": $infoColor,
+                        "warning": $warningColor,
+                        "danger": $dangerColor,
+                        "light": $lightColor,
+                        "dark": $darkColor
+                ),
+                $theme-colors
+);
+
+$boxShadow1: 0px 0px 10px rgba(58, 70, 93, 0.25);
+$boxShadow2: -8px 12px 18px rgba(25, 42, 70, 0.128567);
+$boxShadow3: -7px 8px 16px rgba(55, 70, 95, 0.070171);
+
+$textColor: #596778;
+$placeholderColor: #727E8C;
+$textMutedColor: #828D99;
+
+$borderColor: #C7CFD6;

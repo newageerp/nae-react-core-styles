@@ -1,0 +1,18 @@
+:global {
+  @import "colors";
+  @import "typography";
+  @import "bootstrap/bootstrap";
+  @import "card";
+  @import "form";
+  @import "buttons";
+  @import "text";
+  @import "table";
+  @import "common";
+  @import "nav";
+  @import "navbar";
+  @import "layout";
+
+  * {
+    box-sizing: border-box;
+  }
+}

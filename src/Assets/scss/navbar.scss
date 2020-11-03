@@ -1,0 +1,45 @@
+@import "colors";
+@import "typography";
+.navbar {
+  //display: flex;
+  //align-items: center;
+  background-color: $bgGreyColor6;
+  border-bottom: 1px solid $bgGreyColor3;
+  //
+  //&.navbar-expand-lg {
+  //  @extend .container-fluid;
+  //
+  //  .navbar-collapse {
+  //    @extend .container;
+  //    margin: 0 auto;
+  //  }
+  //}
+  //
+  .nav-items {
+    padding: 10px 0;
+  }
+
+  .navbar-brand {
+    @extend h2;
+    text-decoration: none;
+    font-family: $logoFont;
+    font-weight: 200;
+  }
+  //
+  //.navbar-collapse {
+  //  display: flex;
+  //  align-items: center;
+  //}
+  //
+  .nav-link {
+    @extend h5;
+    padding: 21px 25px;
+    text-decoration: none;
+    //border-radius: 4px;
+    //margin-right: 10px;
+
+    &:hover, &.active {
+      background-color: $bgGreyColor4;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "colors";
+
+.btn {
+  width: auto;
+  min-width: 100px;
+  height: 38px;
+  padding: 4px 12px 5px;
+
+  background-color: $primaryColor;
+  border: none;
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 29px;
+  text-align: center;
+
+  color: $whiteColor;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primaryColor, 10%) !important;
+  }
+
+  &:focus, &.focus {
+    outline: 0;
+  }
+
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      background-color: $value !important;
+
+      &:hover {
+        background-color: darken($value, 10%) !important;
+      }
+    }
+    &.btn-outline-#{$color} {
+      background-color: #fff !important;
+      border: 1px solid $value;
+      color: $value;
+
+      &:hover {
+        background-color: darken($value, 10%) !important;
+        color: #FFF;
+      }
+    }
+
+  }
+}

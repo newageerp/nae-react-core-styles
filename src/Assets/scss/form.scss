@@ -1,0 +1,91 @@
+@import "colors";
+@import "bootstrap/variables";
+
+.form-group {
+  margin: 15px 0;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row wrap;
+  align-items: center;
+
+  &.row {
+    @extend .form-row;
+  }
+
+  > .form-label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  > .form-control {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+
+    display: block;
+    width: 100%;
+    vertical-align: middle;
+    height: 36px;
+
+    padding: 7px 12px;
+  }
+
+  &::placeholder {
+    color: $placeholderColor;
+    opacity: 1;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: $bgDisabledInputColor;
+    opacity: 1;
+  }
+
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  &.form-control {
+    appearance: none; // Fix appearance for date inputs in Safari
+  }
+}
+
+.form-file,
+.form-control-file,
+.form-control-range {
+  display: block;
+  width: 100%;
+}
+
+select.form-control {
+  &[size],
+  &[multiple] {
+    height: auto;
+  }
+}
+
+textarea.form-control {
+  height: auto !important;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$form-grid-gutter-width / 2;
+  margin-left: -$form-grid-gutter-width / 2;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: $form-grid-gutter-width / 2;
+    padding-left: $form-grid-gutter-width / 2;
+  }
+}

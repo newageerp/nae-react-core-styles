@@ -1,0 +1,107 @@
+@import "colors";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+/** FONTS */
+$ibmFont: 'IBM Plex Sans', sans-serif;
+$rubikFont: 'Rubik', sans-serif;
+$logoFont: 'Source Code Pro', sans-serif;
+
+/** HEADING **/
+.heading {
+  font-family: $rubikFont;
+  font-style: normal;
+  font-weight: normal;
+  color: $secondaryColor;
+}
+
+h1 {
+  @extend .heading;
+  font-size: 38px;
+  line-height: 50px;
+  letter-spacing: -0.8px;
+
+  &.title {
+    font-size: 54px;
+    line-height: 50px;
+    letter-spacing: -1.13684px;
+  }
+}
+
+h2 {
+  @extend .heading;
+  font-size: 32px;
+  line-height: 44px;
+
+  &.title {
+    font-size: 45px;
+    line-height: 44px;
+  }
+}
+
+h3 {
+  @extend .heading;
+  font-size: 26px;
+  line-height: 30px;
+
+  &.title {
+    font-size: 38px;
+    line-height: 30px;
+  }
+}
+
+h4 {
+  @extend .heading;
+  font-size: 22px;
+  line-height: 26px;
+
+  &.title {
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 2.16667px;
+  }
+}
+
+h5 {
+  @extend .heading;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+h6 {
+  @extend .heading;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+/** PARAGRAPH **/
+p, .text {
+  color: $textColor;
+  font-family: $ibmFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  margin: 0;
+
+  &.lead {
+    font-size: 18px;
+    line-height: 24px;
+    color: $secondaryColor;
+  }
+
+  &.muted {
+    color: $textMutedColor;
+  }
+
+  &.tiny {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+body {
+  @extend .text;
+  background-color: $bgBody;
+}
