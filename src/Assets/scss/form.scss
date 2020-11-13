@@ -3,10 +3,10 @@
 
 .form-group {
   margin: 15px 0;
-  display: flex;
-  flex: 0 0 auto;
-  flex-flow: row wrap;
-  align-items: center;
+  //display: flex;
+  //flex: 0 0 auto;
+  //flex-flow: row wrap;
+  //align-items: center;
 
   &.row {
     @extend .form-row;
