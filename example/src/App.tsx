@@ -2,11 +2,31 @@ import React, {Fragment} from 'react'
 
 import 'nae-react-core-styles/dist/index.css'
 import {NaeCoreStylesComponent, NaeLayout, NaeNavBar} from "nae-react-core-styles";
-import {Button, Card, Col, Dropdown, Form, Row} from "react-bootstrap";
+import {Button, Card, Col, Dropdown, Form, Nav, Row} from "react-bootstrap";
 
 const App = () => {
   return (
-    <NaeLayout.NaePageWrapper top={<NaeNavBar.NaeTopNavbar/>}>
+    <NaeLayout.NaePageWrapper top={<NaeNavBar.NaeTopNavbar middleComponent={
+      <Nav>
+        <Nav.Link href={'/'}>Nav 1</Nav.Link>
+
+        <Nav.Link href={'/'}>Nav 2</Nav.Link>
+
+        <Nav.Item>
+          <Dropdown>
+            <Dropdown.Toggle variant="link">
+              Dropdown
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="/">Dropdown 1</Dropdown.Item>
+              <Dropdown.Item href="/">Dropdown 2</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Nav.Item>
+
+      </Nav>
+    }/>}>
       <Fragment>
         <div className={"container"}>
           <div className={"row"}>
@@ -209,6 +229,13 @@ const App = () => {
                 <Dropdown.Item href="/">Item 1</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
+
+            <hr/>
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Body>
+
           </Card.Body>
         </Card>
       </Fragment>

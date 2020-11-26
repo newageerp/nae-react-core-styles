@@ -1,5 +1,9 @@
 @import "colors";
 
+.nav {
+  display: flex;
+}
+
 a {
   color: $secondaryColor;
 

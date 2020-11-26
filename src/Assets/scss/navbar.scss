@@ -42,4 +42,17 @@
       background-color: $bgGreyColor4;
     }
   }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+
+    &:hover, &.active {
+      background-color: $bgGreyColor4;
+    }
+
+    & .btn-link {
+      @extend h5;
+    }
+  }
 }
