@@ -1,22 +1,46 @@
 @import "functions";
+@import "../colors";
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$border-radius: .25rem !default;
+$border-radius-lg: .3rem !default;
+$border-radius-sm: .2rem !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
 
 $enable-grid-classes: true !default;
 
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -39,27 +63,85 @@ $card-height: null !default;
 $spacer: 1rem !default;
 $spacers: () !default;
 $spacers: map-merge(
-                (
-                        0: 0,
-                        1: ($spacer * .25),
-                        2: ($spacer * .5),
-                        3: $spacer,
-                        4: ($spacer * 1.5),
-                        5: ($spacer * 3)
-                ),
-                $spacers
+    (
+      0: 0,
+      1: ($spacer * .25),
+      2: ($spacer * .5),
+      3: $spacer,
+      4: ($spacer * 1.5),
+      5: ($spacer * 3)
+    ),
+    $spacers
 );
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
 $sizes: map-merge(
-                (
-                        25: 25%,
-                        50: 50%,
-                        75: 75%,
-                        100: 100%,
-                        auto: auto
-                ),
-                $sizes
+    (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    ),
+    $sizes
 );
+
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+
+$border-width: 1px !default;
+$border-color: $gray-300 !default;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-min-width: 10rem !default;
+$dropdown-padding-x: 0 !default;
+$dropdown-padding-y: .5rem !default;
+$dropdown-spacer: .125rem !default;
+//$dropdown-font-size: $font-size-base !default;
+$dropdown-color: $body-color !default;
+$dropdown-bg: $white !default;
+$dropdown-border-color: rgba($black, .15) !default;
+$dropdown-border-radius: $border-radius !default;
+$dropdown-border-width: $border-width !default;
+$dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width) !default;
+$dropdown-divider-bg: $gray-200 !default;
+$dropdown-divider-margin-y: 0.5rem !default;
+$dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
+
+$dropdown-link-color: $gray-900 !default;
+$dropdown-link-hover-color: darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg: $gray-100 !default;
+
+$dropdown-link-active-color: white !default;
+$dropdown-link-active-bg: $primaryColor !default;
+
+$dropdown-link-disabled-color: $gray-600 !default;
+
+$dropdown-item-padding-y: .25rem !default;
+$dropdown-item-padding-x: 1.5rem !default;
+
+$dropdown-header-color: $gray-600 !default;
+$dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x !default;
+
+$enable-caret: true !default;
+$caret-width: .3em !default;
+$caret-vertical-align: $caret-width * .85 !default;
+$caret-spacing: $caret-width * .85 !default;
+
+$enable-rounded: true !default;
 

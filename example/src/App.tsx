@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 
 import 'nae-react-core-styles/dist/index.css'
 import {NaeCoreStylesComponent, NaeLayout, NaeNavBar} from "nae-react-core-styles";
-import {Button, Card, Col, Form} from "react-bootstrap";
+import {Button, Card, Col, Dropdown, Form, Row} from "react-bootstrap";
 
 const App = () => {
   return (
@@ -109,6 +109,106 @@ const App = () => {
                 Submit
               </Button>
             </Form>
+
+            <hr/>
+            <div role="group" className="btn-group-vertical">
+              <button type="button" className="btn btn-outline-success">btn group 1</button>
+              <button type="button" className="btn btn-danger">btn group 2</button>
+            </div>
+
+            <hr/>
+
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Date</Form.Label>
+                <Row>
+                  <Col>
+                    <Form.Group>
+                      <Form.Control placeholder={"from"}/>
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group>
+                      <Form.Control placeholder={"to"}/>
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label>Field 1</Form.Label>
+                <Form.Control/>
+              </Form.Group>
+              <Form.Group as={Col}>
+                <Form.Label>Field 2</Form.Label>
+                <Form.Control/>
+              </Form.Group>
+              <Form.Group as={Col}>
+              </Form.Group>
+            </Form.Row>
+
+            <hr/>
+
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Select</Form.Label>
+                <Form.Control
+                  as="select"
+                  className="mr-sm-2"
+                >
+                  <option value="0">0</option>
+                  <option value={"1"}>1</option>
+                  <option value={"2"}>2</option>
+                </Form.Control>
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.File label="File"/>
+              </Form.Group>
+            </Form.Row>
+
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Header>Dropdown</Card.Header>
+          <Card.Body>
+            <Dropdown>
+              <Dropdown.Toggle variant="success">
+                Dropdown success
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="/">Item 1</Dropdown.Item>
+                <Dropdown.Item href="/">Item 1</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+
+            <hr/>
+
+            <Dropdown>
+              <Dropdown.Toggle variant="light">
+                Dropdown light
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="/">Item 1</Dropdown.Item>
+                <Dropdown.Item href="/">Item 1</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+
+            <hr/>
+
+            <Dropdown>
+              <Dropdown.Toggle variant="link">
+                Dropdown link
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="/">Item 1</Dropdown.Item>
+                <Dropdown.Item href="/">Item 1</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Card.Body>
         </Card>
       </Fragment>

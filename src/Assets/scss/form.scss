@@ -88,4 +88,15 @@ textarea.form-control {
     padding-right: $form-grid-gutter-width / 2;
     padding-left: $form-grid-gutter-width / 2;
   }
+
+  & .form-group {
+    & .row {
+      & .col {
+
+        & .form-group {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
