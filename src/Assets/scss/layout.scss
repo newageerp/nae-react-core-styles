@@ -3,6 +3,31 @@
   align-items: center;
 }
 
+.v-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.v-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.h-center {
+  display: flex;
+  justify-content: center;
+}
+
+.h-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.h-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .full-height {
   height: 100vh;
 }
