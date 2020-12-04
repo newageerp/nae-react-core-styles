@@ -1,6 +1,6 @@
 {
   "name": "nae-react-core-styles",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "NAE core styles",
   "author": "newageerp",
   "license": "MIT",
@@ -12,8 +12,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs --css-modules false",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs --css-modules false",
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
