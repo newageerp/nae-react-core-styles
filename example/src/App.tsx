@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 
 import 'nae-react-core-styles/dist/index.css'
 import {NaeCoreStylesComponent, NaeLayout, NaeNavBar} from "nae-react-core-styles";
-import {Button, Card, Col, Dropdown, Form, Nav, Row} from "react-bootstrap";
+import {Button, Card, Col, Dropdown, Form, Nav, Row, Spinner} from "react-bootstrap";
 
 const App = () => {
   return (
@@ -235,7 +235,11 @@ const App = () => {
         </Card>
         <Card>
           <Card.Body>
+            <Spinner animation={"border"} variant="info"/>
+            <Spinner animation={"grow"} variant="info"/>
 
+            <Spinner animation={"border"} variant="success"/>
+            <Spinner animation={"grow"} variant="success"/>
           </Card.Body>
         </Card>
       </Fragment>
