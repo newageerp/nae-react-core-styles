@@ -73,6 +73,13 @@
         color: #828D99;
       }
 
+      & .search-input {
+        background-image: url("data:image/svg+xml;utf8,<svg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M8 9L13 14' stroke='%23475F7B' stroke-linecap='square'/><path fill-rule='evenodd' clip-rule='evenodd' d='M8.53539 9.53539C6.58257 11.4882 3.41743 11.4882 1.46461 9.53539C-0.488205 7.58257 -0.488205 4.41743 1.46461 2.46461C3.41743 0.511795 6.58257 0.511795 8.53539 2.46461C10.4882 4.42056 10.4882 7.58569 8.53539 9.53539Z' stroke='%23475F7B'/><path opacity='0.01' d='M13 1L0 13' stroke='%23475F7B' stroke-linecap='square'/></svg>");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 30px;
+      }
+
     }
   }
 }

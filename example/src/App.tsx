@@ -260,7 +260,7 @@ const App = () => {
           <Card.Header className={"search"}>
             <Row>
               <Col className={"v-center"}>
-                <input placeholder={"search"}/>
+                <input placeholder={"search"} className={"search-input"}/>
               </Col>
               <Col sm={2}>
                 <select>
