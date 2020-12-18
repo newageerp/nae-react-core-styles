@@ -19,7 +19,7 @@ export default function NaeTopNavbar(props: Props) {
               <Col sm={8} className='v-center'>
                 {!!props.middleComponent && props.middleComponent}
               </Col>
-              <Col sm={2} className='text-right'>
+              <Col sm={2} className='h-end v-center'>
                 {!!props.rightComponent && props.rightComponent}
               </Col>
             </Row>

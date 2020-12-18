@@ -1,6 +1,7 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins/breakpoints";
 @import "colors";
+@import "typography";
 //
 // Basic Bootstrap table
 //
@@ -22,18 +23,59 @@ $table-accent-bg: #FAFCFD;
 
   th,
   td {
+    font-family: $ibmFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    color: #727E8C;
+
     text-align: left;
 
-    padding: $table-cell-padding;
+    padding: 15px 5px;
     vertical-align: middle;
     border-top: $table-border-width solid $table-border-color;
+
+    &.link {
+      font-weight: 500;
+      color: #5A8DEE;
+      cursor: pointer;
+    }
+
+    &.small {
+      font-size: 12px;
+      line-height: 18px;
+      color: #828D99;
+    }
+
+    &.id {
+      font-size: 12px;
+      line-height: 18px;
+      color: #828D99;
+      //text-align: center;
+    }
+
   }
 
   thead th {
-    font-size: 13px;
+    padding: 15px 5px;
+
+    font-family: $rubikFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #475F7B !important;
+
     vertical-align: bottom;
     border-bottom: (2 * $table-border-width) solid $table-border-color;
     @extend .text-uppercase;
+
+    &.id {
+      font-size: 15px;
+      line-height: 18px;
+    }
   }
 
   tbody + tbody {
@@ -101,8 +143,7 @@ $table-accent-bg: #FAFCFD;
 .table-hover {
   tbody tr {
     &:hover {
-      background-color: $bgGreyColor3;
-      cursor: pointer;
+      background-color: #E7EDF3;
     }
   }
 }

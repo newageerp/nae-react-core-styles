@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react'
 
 import 'nae-react-core-styles/dist/index.css'
-import {NaeCoreStylesComponent, NaeLayout, NaeNavBar} from "nae-react-core-styles";
-import {Button, Card, Col, Dropdown, Form, Nav, Row, Spinner} from "react-bootstrap";
+import {NaeCoreStylesComponent, NaeLayout, NaeNavBar, NaePaging, NaeTable} from "nae-react-core-styles";
+import {Button, Card, Col, Dropdown, Form, Nav, Row, Spinner, Table} from "react-bootstrap";
 
 const App = () => {
   return (
@@ -26,7 +26,9 @@ const App = () => {
         </Nav.Item>
 
       </Nav>
-    }/>}>
+    } rightComponent={<Button variant='outline-danger'>
+      Logout
+    </Button>}/>}>
       <Fragment>
         <div className={"container"}>
           <div className={"row"}>
@@ -241,6 +243,126 @@ const App = () => {
             <Spinner animation={"border"} variant="success"/>
             <Spinner animation={"grow"} variant="success"/>
           </Card.Body>
+        </Card>
+
+
+        <Card className={"card-table"}>
+          <Card.Header>
+            <Row>
+              <Col className={"v-center"}>
+                Elements
+              </Col>
+              <Col className={"text-right"}>
+                <Button variant={"success"}>New</Button>
+              </Col>
+            </Row>
+          </Card.Header>
+          <Card.Header className={"search"}>
+            <Row>
+              <Col className={"v-center"}>
+                <input placeholder={"search"}/>
+              </Col>
+              <Col sm={2}>
+                <select>
+                  <option value={""}>Filter</option>
+                </select>
+              </Col>
+              <Col sm={2}>
+                <select>
+                  <option value={""}>Filter</option>
+                </select>
+              </Col>
+            </Row>
+          </Card.Header>
+          <Card.Body>
+            <Table striped={true} hover={true}>
+              <thead>
+              <tr>
+                <NaeTable.th id={true}>ID</NaeTable.th>
+                <NaeTable.th>Date</NaeTable.th>
+                <NaeTable.th>Number</NaeTable.th>
+                <NaeTable.th>Client</NaeTable.th>
+                <NaeTable.th number={true}>Lines</NaeTable.th>
+                <NaeTable.th number={true}>Total</NaeTable.th>
+                <NaeTable.th number={true}>Total with Vat</NaeTable.th>
+                <NaeTable.th>Currency</NaeTable.th>
+                <NaeTable.th number={true}>Total, EUR</NaeTable.th>
+                <NaeTable.th number={true}>Total with Vat, EUR</NaeTable.th>
+              </tr>
+              </thead>
+              <tbody>
+
+              <tr>
+                <NaeTable.td id={true}>1</NaeTable.td>
+                <NaeTable.td link={true}>2020-02-20</NaeTable.td>
+                <NaeTable.td>000001</NaeTable.td>
+                <NaeTable.td>Google</NaeTable.td>
+                <NaeTable.td number={true}>1</NaeTable.td>
+                <NaeTable.td number={true} small={true}>20.00</NaeTable.td>
+                <NaeTable.td number={true} small={true}>22.00</NaeTable.td>
+                <NaeTable.td small={true}>USD</NaeTable.td>
+                <NaeTable.td number={true}>18.00</NaeTable.td>
+                <NaeTable.td number={true}>20.00</NaeTable.td>
+              </tr>
+
+              <tr>
+                <NaeTable.td id={true}>1</NaeTable.td>
+                <NaeTable.td link={true}>2020-02-20</NaeTable.td>
+                <NaeTable.td>000001</NaeTable.td>
+                <NaeTable.td>Google</NaeTable.td>
+                <NaeTable.td number={true}>1</NaeTable.td>
+                <NaeTable.td number={true} small={true}>20.00</NaeTable.td>
+                <NaeTable.td number={true} small={true}>22.00</NaeTable.td>
+                <NaeTable.td small={true}>USD</NaeTable.td>
+                <NaeTable.td number={true}>18.00</NaeTable.td>
+                <NaeTable.td number={true}>20.00</NaeTable.td>
+              </tr>
+
+
+              </tbody>
+            </Table>
+          </Card.Body>
+          <Card.Footer>
+            <div className={"paging"}>
+              <NaePaging.Prev onClick={() => {
+              }}/>
+              <NaePaging.Group pages={10} activePage={4} onClick={() => {
+              }}/>
+              <NaePaging.Next onClick={() => {
+              }}/>
+            </div>
+          </Card.Footer>
+          <Card.Footer>
+            <div className={"paging"}>
+              <NaePaging.Prev onClick={() => {
+              }}/>
+              <NaePaging.Group pages={10} activePage={6} onClick={() => {
+              }}/>
+              <NaePaging.Next onClick={() => {
+              }}/>
+            </div>
+          </Card.Footer>
+          <Card.Footer>
+            <div className={"paging"}>
+              <NaePaging.Prev onClick={() => {
+              }}/>
+              <NaePaging.Group pages={10} activePage={1} onClick={() => {
+              }}/>
+              <NaePaging.Next onClick={() => {
+              }}/>
+            </div>
+          </Card.Footer>
+
+          <Card.Footer>
+            <div className={"paging"}>
+              <NaePaging.Prev onClick={() => {
+              }}/>
+              <NaePaging.Group pages={5} activePage={4} onClick={() => {
+              }}/>
+              <NaePaging.Next onClick={() => {
+              }}/>
+            </div>
+          </Card.Footer>
         </Card>
       </Fragment>
     </NaeLayout.NaePageWrapper>
