@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import NaePagingBtn from './NaePagingBtn'
 
 interface Props {
@@ -9,26 +9,32 @@ interface Props {
 
 export default function NaePagingGroup(props: Props) {
   const { pages, onClick, activePage } = props
+  const [mapPages, setMapPages] = useState<number[]>([])
 
-  const mapPages: number[] = []
+  const _setMapPages = () => {
+    const _mapPages: number[] = []
 
-  if (pages < 6) {
-    for (let i = 0; i < pages; i++) {
-      mapPages.push(i + 1)
+    if (pages < 6) {
+      for (let i = 0; i < pages; i++) {
+        _mapPages.push(i + 1)
+      }
+    } else {
+      _mapPages.push(1)
+      _mapPages.push(2)
+      _mapPages.push(3)
+
+      if (activePage > 3 && activePage < pages - 3) {
+        _mapPages.push(activePage)
+      }
+
+      _mapPages.push(pages - 2)
+      _mapPages.push(pages - 1)
+      _mapPages.push(pages)
     }
-  } else {
-    mapPages.push(1)
-    mapPages.push(2)
-    mapPages.push(3)
-
-    if (activePage > 3 && activePage < pages - 3) {
-      mapPages.push(activePage)
-    }
-
-    mapPages.push(pages - 2)
-    mapPages.push(pages - 1)
-    mapPages.push(pages)
+    setMapPages(_mapPages)
   }
+
+  useEffect(_setMapPages, [pages, activePage])
 
   return (
     <div className='paging-group'>
