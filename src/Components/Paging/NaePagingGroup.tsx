@@ -28,6 +28,9 @@ export default function NaePagingGroup(props: Props) {
     _mapPages.push(pages - 1)
     _mapPages.push(pages)
 
+    _mapPages = _mapPages.filter(value => {
+      return value >= 1 && value <= pages
+    })
     _mapPages = _mapPages.filter((value, index, self) => {
       return self.indexOf(value) === index
     })
