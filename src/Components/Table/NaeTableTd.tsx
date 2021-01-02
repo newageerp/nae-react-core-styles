@@ -24,5 +24,5 @@ export default function NaeTableTd(props: Props) {
   if (props.id) {
     className.push('id')
   }
-  return <td className={className.join(' ')}>{props.children}</td>
+  return <td className={className.join(' ')} {...props}>{props.children}</td>
 }
