@@ -7,7 +7,7 @@ interface Props {
   number?: boolean
   id?: boolean
 
-  [key: string]: any
+  onClick: any
 }
 
 export default function NaeTableTd(props: Props) {
@@ -24,5 +24,6 @@ export default function NaeTableTd(props: Props) {
   if (props.id) {
     className.push('id')
   }
-  return <td className={className.join(' ')} {...props}>{props.children}</td>
+
+  return <td className={className.join(' ')} onClick={props.onClick}>{props.children}</td>
 }
