@@ -6,6 +6,8 @@ interface Props {
   small?: boolean
   number?: boolean
   id?: boolean
+
+  [key: string]: any
 }
 
 export default function NaeTableTd(props: Props) {
