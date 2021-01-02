@@ -7,7 +7,7 @@ interface Props {
   number?: boolean
   id?: boolean
 
-  onClick: any
+  onClick?: any
 }
 
 export default function NaeTableTd(props: Props) {
