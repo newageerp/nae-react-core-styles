@@ -107,3 +107,7 @@ body {
   @extend .text;
   background-color: $bgBody;
 }
+
+.nw {
+  white-space: nowrap;
+}

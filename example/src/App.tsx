@@ -288,13 +288,14 @@ const App = () => {
                 <NaeTable.th>Currency</NaeTable.th>
                 <NaeTable.th number={true}>Total, EUR</NaeTable.th>
                 <NaeTable.th number={true}>Total with Vat, EUR</NaeTable.th>
+                <NaeTable.th>Long long long long</NaeTable.th>
               </tr>
               </thead>
               <tbody>
 
               <tr>
                 <NaeTable.td id={true}>1</NaeTable.td>
-                <NaeTable.td link={true}>2020-02-20</NaeTable.td>
+                <NaeTable.td link={true} nw={true}>2020-02-20</NaeTable.td>
                 <NaeTable.td>000001</NaeTable.td>
                 <NaeTable.td>Google</NaeTable.td>
                 <NaeTable.td number={true}>1</NaeTable.td>
@@ -303,11 +304,12 @@ const App = () => {
                 <NaeTable.td small={true}>USD</NaeTable.td>
                 <NaeTable.td number={true}>18.00</NaeTable.td>
                 <NaeTable.td number={true}>20.00</NaeTable.td>
+                <NaeTable.td>Google Google Google Google Google Google Google Google </NaeTable.td>
               </tr>
 
               <tr>
                 <NaeTable.td id={true}>1</NaeTable.td>
-                <NaeTable.td link={true}>2020-02-20</NaeTable.td>
+                <NaeTable.td link={true} nw={true}>2020-02-20</NaeTable.td>
                 <NaeTable.td>000001</NaeTable.td>
                 <NaeTable.td>Google</NaeTable.td>
                 <NaeTable.td number={true}>1</NaeTable.td>
@@ -316,6 +318,7 @@ const App = () => {
                 <NaeTable.td small={true}>USD</NaeTable.td>
                 <NaeTable.td number={true}>18.00</NaeTable.td>
                 <NaeTable.td number={true}>20.00</NaeTable.td>
+                <NaeTable.td>GoogleGoogleGoogleGoogle GoogleGoogleGoogleGoogle</NaeTable.td>
               </tr>
 
 

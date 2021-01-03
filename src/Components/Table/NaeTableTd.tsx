@@ -6,6 +6,7 @@ interface Props {
   small?: boolean
   number?: boolean
   id?: boolean
+  nw?: boolean
 
   onClick?: any
 }
@@ -23,6 +24,9 @@ export default function NaeTableTd(props: Props) {
   }
   if (props.id) {
     className.push('id')
+  }
+  if (props.nw) {
+    className.push('nw')
   }
 
   return <td className={className.join(' ')} onClick={props.onClick}>{props.children}</td>
