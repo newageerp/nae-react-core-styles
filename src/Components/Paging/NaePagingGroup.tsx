@@ -46,11 +46,10 @@ export default function NaePagingGroup(props: Props) {
       {mapPages.map((_p: number, index: number) => {
         const isSep = index > 0 && _p - mapPages[index - 1] > 1
         return (
-          <Fragment>
+          <Fragment key={'page-' + _p}>
             {isSep && <button>...</button>}
             <NaePagingBtn
               active={_p === activePage}
-              key={'page-' + _p}
               onClick={() => onClick(_p)}
             >
               {_p}
