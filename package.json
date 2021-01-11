@@ -1,6 +1,6 @@
 {
   "name": "nae-react-core-styles",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "NAE core styles",
   "author": "newageerp",
   "license": "MIT",
@@ -34,6 +34,7 @@
     "@types/node": "^12.12.38",
     "@types/react": "^16.9.27",
     "@types/react-dom": "^16.9.7",
+    "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "babel-eslint": "^10.0.3",
@@ -63,6 +64,7 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "node-sass": "^5.0.0",
-    "react-bootstrap": "^1.4.0"
+    "react-bootstrap": "^1.4.0",
+    "react-router-dom": "^5.2.0"
   }
 }
